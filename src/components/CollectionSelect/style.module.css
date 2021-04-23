@@ -1,0 +1,115 @@
+.collectionWrapper {
+  position: relative;
+  z-index: 6;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+}
+
+.backdrop .transparent {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 120px;
+  height: 100%;
+  width: 100%;
+}
+
+.collectionSelect {
+  position: relative;
+  width: 17vw;
+  height: 50px;
+  padding: 10px 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 50%;
+  background-color: #fff;
+  border-radius: 4px;
+  border: none;
+}
+
+.collectionSelect:focus {
+  outline: none;
+}
+
+.collectionSelect select {
+  display: none;
+}
+
+.collectionWrapper::before {
+  content: "";
+  position: absolute;
+  width: 16vw;
+  height: 15px;
+  background-color: #d5d7e5;
+  top: 40px;
+  right: 9px;
+  border-radius: 4px;
+}
+
+.collectionOptionGroup {
+  position: absolute;
+  box-shadow: 0 0 10px -5px black;
+  transition: all 0.2s;
+}
+
+.collectionTitle {
+  float: left;
+  color: #444444;
+  text-transform: capitalize;
+}
+
+.collectionOption {
+  width: 17vw;
+  height: 50px;
+  padding: 10px 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 50%;
+  background-color: #fff;
+  color: black;
+  text-transform: capitalize;
+}
+
+.collectionOption ~ .collectionOption {
+  border-top: 1px solid #f3f4f8;
+}
+
+.collectionOption:last-child {
+  border-radius: 0 0 4px 4px;
+}
+
+.collectionOption:hover {
+  background-color: #f2f3f7;
+}
+
+@media (max-width: 768px) {
+  .collectionSelect {
+    width: 100%;
+  }
+  .collectionWrapper::before {
+    width: 90%;
+  }
+  .collectionOption {
+    width: 100%;
+    font-size: 15px;
+    height: unset;
+  }
+  .backdrop {
+    display: none;
+  }
+
+  .collectionTitle {
+    float: left;
+  }
+}
