@@ -77,7 +77,7 @@ const WithSearch = ({ children }) => {
 
 	// Inital Search
 	useEffect(() => {
-		setQueryInput("London");
+		setQueryInput("Istanbul");
 		setSearchStatus(true);
 	}, []);
 

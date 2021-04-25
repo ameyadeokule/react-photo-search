@@ -14,7 +14,7 @@ const Navbar = () => {
 	const { setQueryInput, setSearchStatus, setSelectedCollection } = useSearch();
 
 	const resetQuery = () => {
-		setQueryInput("London");
+		setQueryInput("Istanbul");
 		setSelectedCollection({});
 		setSearchStatus(true);
 	};
